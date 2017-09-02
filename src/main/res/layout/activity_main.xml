@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#56CCF2"
+    tools:context="io.github.to_dy.contactcard.MainActivity"
+    tools:layout_editor_absoluteY="0dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="410dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttons"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="320dp"
+            android:layout_height="350dp"
+            android:background="@drawable/rectangle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="1.0">
+
+
+            <LinearLayout
+                android:id="@+id/social"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.886">
+
+                <ImageView
+                    android:id="@+id/linkedin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:onClick="linkedin"
+                    app:srcCompat="@drawable/ic_linkedin" />
+
+                <ImageView
+                    android:id="@+id/github"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:onClick="github"
+                    app:srcCompat="@drawable/ic_github_logo" />
+
+                <ImageView
+                    android:id="@+id/twitter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="twitter"
+                    app:srcCompat="@drawable/ic_twitter" />
+
+                <ImageView
+                    android:id="@+id/slack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="slack"
+                    app:srcCompat="@drawable/ic_slack" />
+
+                <ImageView
+                    android:id="@+id/facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="facebook"
+                    app:srcCompat="@drawable/ic_facebook" />
+
+                <ImageView
+                    android:id="@+id/instagram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="instagram"
+                    app:srcCompat="@drawable/ic_instagram" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="2sp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="Gradually finding my way in software development. Constantly learning..."
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.557" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="96dp"
+                android:text="Toluwalope Yussuff"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Software Developer | Student"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:typeface="normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="148dp"
+            android:layout_height="148dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/tody"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="2dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <Button
+            android:id="@+id/callBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn"
+            android:drawableLeft="@drawable/ic_telephone"
+            android:drawablePadding="7dp"
+            android:onClick="call"
+            android:padding="5dp"
+            android:paddingRight="5dp"
+            android:text="Call"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="78dp"
+            tools:layout_editor_absoluteY="471dp" />
+
+        <Button
+            android:id="@+id/msgBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.06"
+            android:background="@drawable/btn"
+            android:drawableLeft="@drawable/ic_envelope"
+            android:drawablePadding="5dp"
+            android:onClick="email"
+            android:padding="5dp"
+            android:text="Message"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="224dp"
+            tools:layout_editor_absoluteY="471dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
